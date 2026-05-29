@@ -40,7 +40,7 @@ function Login() {
                 <div className="login-header">
                     <img src="/profil default instagram.jpg" alt="Antagram Logo" className="login-logo" />
                     <h1>Antagram</h1>
-                    <p>Bergabung dengan komunitas kami</p>
+                    <p>Selamat datang di Antagram</p>
                 </div>
 
                 <form className="login-form" onSubmit={handleLogin}>

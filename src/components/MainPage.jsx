@@ -1,32 +1,27 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
+import Menu from "./Menu";
 import Footer from "./Footer";
-import UserCard from "./UserCard";
+import "../styles/MainPage.css";
 
 function MainContent() {
-    const [users, setUsers] = useState([]);
-
-    useEffect(() => {
-        const allUsers = JSON.parse(localStorage.getItem("users")) || [];
-        setUsers(allUsers);
-    }, []);
-
     return (
-        <div>
+        /* 1. Mengikuti CSS: Layout vertikal dari atas ke bawah */
+        <div className="app-container">
             <Navbar />
-            <div className="main-content" style={{ minHeight: "60vh", padding: "2rem" }}>
-                <h2 style={{ textAlign: "center", marginBottom: "2rem", fontSize: "1.8rem", color: "#333" }}>Pengguna Terdaftar</h2>
-                {users.length > 0 ? (
-                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: "1.5rem" }}>
-                        {users.map((user, index) => (
-                            <UserCard key={index} user={user} />
-                        ))}
-                    </div>
-                ) : (
-                    <p style={{ textAlign: "center", color: "#999", fontSize: "1.1rem" }}>Belum ada pengguna terdaftar</p>
-                )}
+            
+            {/* 2. Mengikuti CSS: Layout horizontal untuk Sidebar + Konten */}
+            <div className="main-wrapper">
+                <Menu /> {/* Di dalam Menu.jsx pastikan elemen terluarnya punya class="sidebar" */}
+                
+                {/* 3. Mengikuti CSS: Tempat konten halaman Anda berada */}
+                <div className="content-area">
+                    {/* Taruh konten utama atau box Anda di sini */}
+                </div>
             </div>
-            <Footer />
+            
+            {/* 4. Mengikuti CSS: Footer otomatis didorong ke paling bawah */}
+            <Footer /> {/* Di dalam Footer.jsx pastikan elemen terluarnya punya class="footer" */}
         </div>
     );
 }
