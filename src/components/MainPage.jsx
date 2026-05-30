@@ -1,27 +1,35 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext } from "react";
+import { UserContext } from "../context/UserContext"; 
 import Navbar from "./Navbar";
 import Menu from "./Menu";
+import Search from "./Search";
+import Content from "./Content";
 import Footer from "./Footer";
 import "../styles/MainPage.css";
 
 function MainContent() {
+    // Ambil data posts dan activePage dari UserContext
+    const { posts, activePage } = useContext(UserContext);
+
     return (
-        /* 1. Mengikuti CSS: Layout vertikal dari atas ke bawah */
         <div className="app-container">
             <Navbar />
-            
-            {/* 2. Mengikuti CSS: Layout horizontal untuk Sidebar + Konten */}
             <div className="main-wrapper">
-                <Menu /> {/* Di dalam Menu.jsx pastikan elemen terluarnya punya class="sidebar" */}
-                
-                {/* 3. Mengikuti CSS: Tempat konten halaman Anda berada */}
+                <Menu />
                 <div className="content-area">
-                    {/* Taruh konten utama atau box Anda di sini */}
+                    {activePage === "home" && (
+                        <div className="posts-vertical-wrapper" style={{ display: "flex", flexDirection: "column", gap: "2rem", width: "100%" }}>
+                            {posts.map((post) => (
+                                <Content key={post.id} post={post} />
+                            ))}
+                        </div>
+                    )}
+                    {activePage === "find" && (
+                        <Search />
+                    )}
                 </div>
             </div>
-            
-            {/* 4. Mengikuti CSS: Footer otomatis didorong ke paling bawah */}
-            <Footer /> {/* Di dalam Footer.jsx pastikan elemen terluarnya punya class="footer" */}
+                <Footer />
         </div>
     );
 }

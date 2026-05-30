@@ -30,6 +30,7 @@
   margin-top: auto;
 }
 
+
 .content {
     width: 100%;
     display: flex;
@@ -76,6 +77,8 @@
     height: 100%;
     flex-direction: column;
   }
+
+  
 
   .content-area {
     padding: 1rem;

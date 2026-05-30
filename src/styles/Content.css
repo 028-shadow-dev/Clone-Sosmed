@@ -1,0 +1,132 @@
+/* Container Kartu Utama */
+.content-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #efefef;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 1rem;
+}
+
+/* Bagian Atas / Profil User */
+.content-left-side{
+  display: flex;
+  flex-direction: column;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+.content-username {
+  font-size: 1.1rem;
+  color: #262626;
+  font-weight: 600;
+  margin: 0;
+}
+
+.content-email {
+  font-size: 0.85rem;
+  color: #8e8e8e;
+  margin: 0.2rem 0 0 0;
+  line-height: 1.4;
+}
+
+.content-deskripsi {
+  font-size: larger;
+  color: black;
+}
+
+/* Area Pembungkus Gambar */
+.content-image-area {
+  width: 100%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-top: 0.5rem;
+  background-color: #fafafa;
+}
+
+/* Pengaturan Gambar Postingan */
+.content-image {
+  width: 100%;
+  height: 350px; /* Tinggi proporsional agar gambar terlihat gagah */
+  object-fit: fill; /* Memotong gambar secara cerdas agar tidak gepeng */
+  display: block;
+}
+
+/* Area Komentar Di Dalam Kartu */
+.content-right-side {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Footer Kartu (Tempat Like/Follow Nanti) */
+/* Container footer tombol */
+.content-footer {
+    border-top: 1px solid #efefef;
+    width: 100%;
+}
+
+/* Tombol Like */
+.btn-like {
+    background: none;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #262626;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.1s ease;
+}
+
+.btn-like:active {
+    transform: scale(1.15); /* Efek memantul kecil saat diklik */
+}
+
+.btn-like.liked {
+    color: #ed4956; /* Warna merah khas IG saat aktif */
+}
+
+/* Tombol Follow */
+.btn-follow {
+    background-color: #0095f6; /* Warna biru khas IG */
+    color: white;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-follow:hover {
+    background-color: #1877f2;
+}
+
+/* Ketika statusnya sudah di-follow */
+.btn-follow.followed {
+    background-color: #efefef;
+    color: #262626;
+    border: 1px solid #dbdbdb;
+}
+
+.btn-follow.followed:hover {
+    background-color: #dbdbdb;
+}
+
+@media (max-width: 780px) {
+  .content-card {
+    display: flex;
+    flex-direction: column;
+  }
+}

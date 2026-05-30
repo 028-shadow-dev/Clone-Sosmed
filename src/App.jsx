@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import Login from './components/Login'
 import MainPage from './components/MainPage'
 import Signup from './components/Signup'
+import { UserContextProvider } from './context/UserContext'
 import './App.css'
 
 function App() {
@@ -27,13 +28,15 @@ function App() {
 
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Login />} />
-        <Route path='/signup' element={<Signup />} />
-        <Route path='/MainPage' element={<MainPage />} />
-      </Routes>
-    </BrowserRouter>
+    <UserContextProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Login />} />
+          <Route path='/signup' element={<Signup />} />
+          <Route path='/MainPage' element={<MainPage />} />
+        </Routes>
+      </BrowserRouter>
+    </UserContextProvider>
   )
 }
 

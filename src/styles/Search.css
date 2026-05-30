@@ -1,0 +1,111 @@
+/* Container Utama Halaman Pencarian */
+.search-page-container {
+    width: 100%;
+    max-width: 935px; /* Standar max-width layout feed biar gak terlalu lebar */
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+/* Header Pencarian */
+.search-header-zone {
+    background: #ffffff;
+    border: 1px solid #efefef;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+.search-header-zone h2 {
+    margin: 0 0 0.2rem 0;
+    font-size: 24px;
+    color: #262626;
+}
+
+.search-subtitle {
+    margin: 0 0 1.5rem 0;
+    color: #8e8e8e;
+    font-size: 14px;
+}
+
+/* Wrapper Kotak Input */
+.search-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.search-icon-inside {
+    position: absolute;
+    left: 14px;
+    color: #8e8e8e;
+    font-size: 16px;
+    pointer-events: none;
+}
+
+.search-box-input {
+    width: 100%;
+    padding: 11px 40px 11px 42px;
+    font-size: 15px;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    background-color: #fafafa;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.search-box-input::placeholder {
+    color: black;
+    opacity: 1;
+}
+
+.search-box-input:focus {
+    color: black;
+    background-color: #ffffff;
+    border-color: #507cf3; /* Warna ungu/biru tema Antagram */
+    box-shadow: 0 0 0 3px rgba(80, 124, 243, 0.1);
+}
+
+/* Tombol X Hapus Ketikan */
+.search-clear-btn {
+    position: absolute;
+    right: 14px;
+    background: none;
+    border: none;
+    color: #c7c7c7;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.search-clear-btn:hover {
+    color: #262626;
+}
+
+/* State Jika Tidak Ada User */
+.search-no-results {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: #ffffff;
+    border: 1px solid #efefef;
+    border-radius: 12px;
+    color: #262626;
+}
+
+.no-results-icon {
+    font-size: 40px;
+    margin-bottom: 1rem;
+}
+
+.search-no-results h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 18px;
+}
+
+.search-no-results p {
+    margin: 0;
+    color: #8e8e8e;
+    font-size: 14px;
+}
