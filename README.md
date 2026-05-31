@@ -203,12 +203,16 @@ return (
 ### 1. **useState** - Mengelola State Lokal dan Global
 
 **Di UserContext.jsx:**
+<details>
+<summary>Klik di sini untuk melihat Kode</summary>
+
 ```jsx
 const [searchQuery, setSearchQuery] = useState("");
 const [user, setUser] = useState(null);
 const [posts, setPosts] = useState(INITIAL_POSTS);
 const [activePage, setActivePage] = useState("home");
 ```
+</details>
 
 **Fungsi:**
 - `searchQuery` - Menyimpan input pencarian
@@ -217,15 +221,22 @@ const [activePage, setActivePage] = useState("home");
 - `activePage` - Menyimpan halaman aktif (home/find)
 
 **Di Search.jsx:**
+<details>
+<summary>Klik di sini untuk melihat Kode</summary>
+
 ```jsx
 const [email, setEmail] = useState('');
 const [user, setUser] = useState('');
 const [password, setPassword] = useState('');
 ```
+</details>
 
 ### 2. **useEffect** - Menjalankan Side Effects
 
 **Fetch data dari API:**
+<details>
+<summary>Klik di sini untuk melihat Kode</summary>
+
 ```jsx
 useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/users')
@@ -237,8 +248,12 @@ useEffect(() => {
         .catch((error) => console.error("Error:", error));
 }, []); // Empty dependency array = run once on mount
 ```
+</details>
 
 **Check localStorage saat app start:**
+<details>
+<summary>Klik di sini untuk melihat Kode</summary>
+
 ```jsx
 useEffect(() => {
     const loggedInUser = localStorage.getItem("user");
@@ -247,31 +262,44 @@ useEffect(() => {
     }
 }, []);
 ```
+</details>
 
 ### 3. **useContext** - Mengakses Global State
 
 **Di Menu.jsx:**
+<details>
+<summary>Klik di sini untuk melihat Kode</summary>
+
 ```jsx
 const { activePage, setActivePage } = useContext(UserContext);
 
 // Gunakan untuk update page saat klik menu
 onClick={() => setActivePage("find")}
 ```
+</details>
 
 **Di Content.jsx:**
+<details>
+<summary>Klik di sini untuk melihat Kode</summary>
+
 ```jsx
 const { handleLike, handleFollow } = useContext(UserContext);
 
 // Gunakan untuk trigger like/follow
 onClick={() => handleLike(post.id)}
 ```
+</details>
 
 **Di Search.jsx:**
+<details>
+<summary>Klik di sini untuk melihat Kode</summary>
+
 ```jsx
 const { posts, searchQuery, setSearchQuery } = useContext(UserContext);
 
 // Gunakan untuk filter dan update search query
 ```
+</details>
 
 ---
 
