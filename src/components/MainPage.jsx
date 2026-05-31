@@ -28,7 +28,7 @@ function MainContent() {
                     {activePage === "find" && (
                         <Search />
                     )}
-                    {activePage === "Friend" && (
+                    {activePage === "friend" && (
                         <Friend />
                     )}
                 </div>
