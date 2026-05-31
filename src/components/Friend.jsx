@@ -16,7 +16,7 @@ function Friend() {
                 <h2>My Friends</h2>
                 <p className="friend-subtitle">Daftar creator yang sedang kamu ikuti</p>
                 <div className="friend-count-badge">
-                    👥 {followedFriends.length} Following
+                     {followedFriends.length} Following
                 </div>
             </div>
 
@@ -24,13 +24,12 @@ function Friend() {
                 {followedFriends.length > 0 ? (
                     <div className="posts-vertical-wrapper" style={{ display: "flex", flexDirection: "column", gap: "2rem", width: "100%" }}>
                         {followedFriends.map((post) => (
-                            // Render menggunakan komponen Content andalan kamu
                             <Content key={post.id} post={post} />
                         ))}
                     </div>
                 ) : (
                     <div className="friend-empty-state">
-                        <div className="empty-friend-icon">👥📭</div>
+                        <div className="empty-friend-icon">No Friend</div>
                         <h3>Belum ada teman</h3>
                         <p>Kamu belum mem-follow siapapun. Cari creator seru di menu Find!</p>
                     </div>

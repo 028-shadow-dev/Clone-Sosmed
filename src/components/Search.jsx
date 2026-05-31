@@ -53,7 +53,6 @@ function Search() {
                 {filteredPosts.length > 0 ? (
                     <div className="posts-vertical-wrapper" style={{ display: "flex", flexDirection: "column", gap: "2rem", width: "100%" }}>
                         {filteredPosts.map((post) => (
-                            // Memanggil komponen Content
                             <Content key={post.id} post={post} />
                         ))}
                     </div>
