@@ -76,7 +76,7 @@ src/
 
 ---
 
-## 🎨 Component dan Fungsinya
+## Component dan Fungsinya
 
 ### 1. **Navbar.jsx**
 - Menampilkan logo "Antagram"
@@ -198,7 +198,7 @@ return (
 
 ---
 
-## 🎯 Implementasi React Hooks
+## Implementasi React Hooks
 
 ### 1. **useState** - Mengelola State Lokal dan Global
 
@@ -273,19 +273,35 @@ const { posts, searchQuery, setSearchQuery } = useContext(UserContext);
 // Gunakan untuk filter dan update search query
 ```
 
-### 4. **useRef** - Referensi DOM (Tidak dipakai di project ini, tapi bisa ditambahkan untuk input)
+### 4. **useRef** - 
 
 **Contoh penggunaan:**
-```jsx
-const searchInputRef = useRef(null);
+<details>
+  <summary>Klik di sini untuk melihat Screenshot</summary>
+  <br />
+    ```jsx
+    const searchInputRef = useRef(null);
 
-const handleSearch = () => {
-    const value = searchInputRef.current.value;
-    setSearchQuery(value);
-};
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            if (searchInputRef.current) {
+                searchInputRef.current.focus();
+            }
+        }, 100);
 
-<input ref={searchInputRef} type="text" />
-```
+        return () => clearTimeout(timer);
+    }, []);
+
+    <input
+        ref={searchInputRef} 
+        type="text"
+        placeholder="Ketik username..."
+        value={searchQuery || ""}
+        onChange={(e) => setSearchQuery && setSearchQuery(e.target.value)}
+        className="search-box-input"
+    />
+    ```
+</details>
 
 ---
 
