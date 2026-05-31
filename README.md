@@ -256,9 +256,3 @@ const handleLike = (id) => {
 - **API Documentation**: https://jsonplaceholder.typicode.com
 
 ---
-
-## 📋 Catatan Pengembang
-
-- Aplikasi menggunakan localStorage untuk autentikasi sederhana (tidak aman untuk production)
-- Aplikasi menggunakan localStorage jadi setiap akun user bisa bebas bikin
-
