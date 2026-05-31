@@ -277,32 +277,35 @@ const { posts, searchQuery, setSearchQuery } = useContext(UserContext);
 
 ### 4. **useRef** - 
 
+Contoh penggunaan:
+
 <details>
-    <summary>Klik di sini untuk melihat Kode Praktis</summary>
+<summary>Klik di sini untuk melihat Kode</summary>
 
-    ```jsx
-    const searchInputRef = useRef(null);
+```jsx
+const searchInputRef = useRef(null);
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            if (searchInputRef.current) {
-                searchInputRef.current.focus();
-            }
-        }, 100);
+useEffect(() => {
+    const timer = setTimeout(() => {
+        if (searchInputRef.current) {
+            searchInputRef.current.focus();
+        }
+    }, 100);
 
-        return () => clearTimeout(timer);
-    }, []);
+    return () => clearTimeout(timer);
+}, []);
 
-    <input
-        ref={searchInputRef} 
-        type="text"
-        placeholder="Ketik username..."
-        value={searchQuery || ""}
-        onChange={(e) => setSearchQuery && setSearchQuery(e.target.value)}
-        className="search-box-input"
-    />
-    ```
+<input
+    ref={searchInputRef} 
+    type="text"
+    placeholder="Ketik username..."
+    value={searchQuery || ""}
+    onChange={(e) => setSearchQuery && setSearchQuery(e.target.value)}
+    className="search-box-input"
+/>
+```
 </details>
+
 
 ---
 
