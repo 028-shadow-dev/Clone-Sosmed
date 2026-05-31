@@ -14,42 +14,12 @@ Antagram adalah aplikasi web social media sederhana yang dibangun menggunakan **
 
 ## Fitur Utama
 
-- 🔐 **Login & Signup** - Autentikasi sederhana dengan localStorage
-- 📱 **Home Feed** - Menampilkan posts dari berbagai user
-- 🔍 **Search User** - Mencari user berdasarkan username
-- ❤️ **Like Feature** - Like dan unlike posts
-- 👥 **Follow Feature** - Follow dan unfollow user
-- 🎨 **Modern UI** - Interface yang menarik dan user-friendly
-
----
-
-## Struktur Project
-
-```
-src/
-├── components/
-│   ├── Navbar.jsx          # Header dengan logo dan user info
-│   ├── Menu.jsx            # Sidebar navigasi (Home, Find, Friend, Setting)
-│   ├── Search.jsx          # Halaman pencarian user
-│   ├── Content.jsx         # Komponen untuk menampilkan satu post
-│   ├── Comment.jsx         # Komponen komentar
-│   ├── Footer.jsx          # Footer aplikasi
-│   ├── Login.jsx           # Halaman login
-│   ├── Signup.jsx          # Halaman signup
-│   └── MainPage.jsx        # Halaman utama
-├── context/
-│   └── UserContext.jsx     # Global state management dengan Context API
-├── styles/
-│   ├── Navbar.css
-│   ├── Menu.css
-│   ├── Search.css
-│   ├── Content.css
-│   ├── Footer.css
-│   ├── Login.css
-│   └── MainPage.css
-├── App.jsx                 # Root component dengan routing
-└── main.jsx                # Entry point aplikasi
-```
+- **Login & Signup** - Autentikasi sederhana dengan localStorage
+- **Home Feed** - Menampilkan posts dari berbagai user
+- **Search User** - Mencari user berdasarkan username
+- **Like Feature** - Like dan unlike posts
+- **Follow Feature** - Follow dan unfollow user
+- **Modern UI** - Interface yang menarik dan user-friendly
 
 ---
 
@@ -71,7 +41,7 @@ src/
 **Penjelasan:**
 - Fetch data user dari API saat component mount (dependency array kosong)
 - Merge data API dengan INITIAL_POSTS untuk membuat posts yang lebih lengkap
-- Data disimpan ke state `posts` menggunakan `setPosts`
+- Data disimpan ke state `posts`
 - Error handling dengan `.catch()` untuk menangani kegagalan request
 
 ---
@@ -419,8 +389,8 @@ const handleLike = (id) => {
 
 ## 🔗 Links Penting
 
-- **GitHub Repository**: [Link repository]
-- **Live Demo**: [Link deploy]
+- **GitHub Repository**: https://github.com/028-shadow-dev/Clone-Sosmed.git
+- **Live Demo**: https://sosmed-clone.vercel.app/
 - **API Documentation**: https://jsonplaceholder.typicode.com
 
 ---
@@ -430,7 +400,3 @@ const handleLike = (id) => {
 - Aplikasi menggunakan localStorage untuk autentikasi sederhana (tidak aman untuk production)
 - Aplikasi menggunakan localStorage jadi setiap akun user bisa bebas bikin
 
----
-
-**Dikerjakan oleh:** Rakha Aqilah Vicrie
-**Sekolah:** SMK Letris Indonesia 2
