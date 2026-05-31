@@ -277,9 +277,8 @@ const { posts, searchQuery, setSearchQuery } = useContext(UserContext);
 
 **Contoh penggunaan:**
 <details>
-  <summary>Klik di sini untuk melihat Screenshot</summary>
-  <br />
     ```jsx
+    <summary>Klik di sini untuk melihat Screenshot</summary>
     const searchInputRef = useRef(null);
 
     useEffect(() => {
