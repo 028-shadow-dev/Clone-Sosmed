@@ -1,0 +1,70 @@
+.friend-page-container {
+    width: 100%;
+    max-width: 935px;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.friend-header-zone {
+    background: #ffffff;
+    border: 1px solid #efefef;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.friend-header-zone h2 {
+    margin: 0 0 0.2rem 0;
+    font-size: 24px;
+    color: #262626;
+}
+
+.friend-subtitle {
+    margin: 0;
+    color: #8e8e8e;
+    font-size: 14px;
+}
+
+/* Badge jumlah teman */
+.friend-count-badge {
+    position: absolute;
+    right: 2rem;
+    top: 55%;
+    transform: translateY(-50%);
+    background-color: #507cf3;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* State Jika Kosong */
+.friend-empty-state {
+    text-align: center;
+    padding: 5rem 2rem;
+    background: #ffffff;
+    border: 1px solid #efefef;
+    border-radius: 12px;
+    color: #262626;
+}
+
+.empty-friend-icon {
+    font-size: 45px;
+    margin-bottom: 1rem;
+}
+
+.friend-empty-state h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 18px;
+}
+
+.friend-empty-state p {
+    margin: 0;
+    color: #8e8e8e;
+    font-size: 14px;
+}

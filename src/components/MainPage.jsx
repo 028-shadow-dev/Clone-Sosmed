@@ -3,13 +3,14 @@ import { UserContext } from "../context/UserContext";
 import Navbar from "./Navbar";
 import Menu from "./Menu";
 import Search from "./Search";
+import Friend from "./Friend";
 import Content from "./Content";
 import Footer from "./Footer";
 import "../styles/MainPage.css";
 
 function MainContent() {
     // Ambil data posts dan activePage dari UserContext
-    const { posts, activePage } = useContext(UserContext);
+    const { posts, activePage } = useContext(UserContext) || {};
 
     return (
         <div className="app-container">
@@ -26,6 +27,9 @@ function MainContent() {
                     )}
                     {activePage === "find" && (
                         <Search />
+                    )}
+                    {activePage === "Friend" && (
+                        <Friend />
                     )}
                 </div>
             </div>
