@@ -273,12 +273,14 @@ const { posts, searchQuery, setSearchQuery } = useContext(UserContext);
 // Gunakan untuk filter dan update search query
 ```
 
+---
+
 ### 4. **useRef** - 
 
-**Contoh penggunaan:**
 <details>
+    <summary>Klik di sini untuk melihat Kode Praktis</summary>
+
     ```jsx
-    <summary>Klik di sini untuk melihat Screenshot</summary>
     const searchInputRef = useRef(null);
 
     useEffect(() => {
