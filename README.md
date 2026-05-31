@@ -249,7 +249,7 @@ const handleLike = (id) => {
 
 ---
 
-## 🔗 Links Penting
+## Links Penting
 
 - **GitHub Repository**: https://github.com/028-shadow-dev/Clone-Sosmed.git
 - **Live Demo**: https://sosmed-clone.vercel.app/
