@@ -64,7 +64,8 @@ src/
 
 <details>
   <summary>Klik di sini untuk melihat Screenshot</summary>
-  ![Featch API menggunakan use effect](./src/assets/Fetch-API-react.png)
+  <br />
+  <img src="./src/assets/Fetch-API-react.png" alt="Fetch API menggunakan use effect" width="100%" />
 </details>
 
 **Penjelasan:**
