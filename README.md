@@ -84,6 +84,9 @@ src/
 - Tombol logout untuk keluar dari aplikasi
 
 **Kode:**
+<details>
+<summary>Klik di sini untuk melihat Kode</summary>
+
 ```jsx
 function Navbar() {
     const currentUser = localStorage.getItem("user");
@@ -106,6 +109,7 @@ function Navbar() {
     );
 }
 ```
+</details>
 
 ### 2. **Menu.jsx**
 - Sidebar navigasi dengan 4 menu utama
@@ -115,6 +119,9 @@ function Navbar() {
 - Setting - Pengaturan (placeholder)
 
 **Kode:**
+<details>
+<summary>Klik di sini untuk melihat Kode</summary>
+
 ```jsx
 const { activePage, setActivePage } = useContext(UserContext);
 
@@ -131,6 +138,7 @@ return (
     </aside>
 );
 ```
+</details>
 
 ### 3. **MainPage.jsx**
 - Menampilkan content area utama
@@ -138,6 +146,9 @@ return (
 - Render Content saat home, Search saat find
 
 **Kode:**
+<details>
+<summary>Klik di sini untuk melihat Kode</summary>
+
 ```jsx
 function MainContent() {
     const { posts, activePage } = useContext(UserContext);
@@ -156,6 +167,7 @@ function MainContent() {
     );
 }
 ```
+</details>
 
 ### 4. **Content.jsx**
 - Menampilkan satu post dengan username, email, deskripsi
@@ -169,6 +181,9 @@ function MainContent() {
 - Menampilkan hasil pencarian dengan Content component
 
 **Kode:**
+<details>
+<summary>Klik di sini untuk melihat Kode</summary>
+
 ```jsx
 const { posts, searchQuery, setSearchQuery } = useContext(UserContext);
 
@@ -190,6 +205,7 @@ return (
     </div>
 );
 ```
+</details>
 
 ### 6. **Login.jsx & Signup.jsx**
 - Form autentikasi sederhana
@@ -337,12 +353,15 @@ useEffect(() => {
 
 ---
 
-## 🎮 Interaktivitas Website
+## Interaktivitas Website
 
 ### 1. Like Feature
-- Klik tombol "❤️ Like" untuk like post
+- Klik tombol "Like" untuk like post
 - Button berubah warna menjadi "❤️ Liked" saat di-like
 - Data tersimpan di state `isLiked`
+
+<details>
+<summary>Klik di sini untuk melihat Kode</summary>
 
 ```jsx
 const handleLike = (id) => {
@@ -353,10 +372,11 @@ const handleLike = (id) => {
     );
 };
 ```
+</details>
 
 ### 2. Follow Feature
-- Klik tombol "👥 Follow" untuk follow user
-- Button berubah menjadi "👥 Following" saat sudah follow
+- Klik tombol "Follow" untuk follow user
+- Button berubah menjadi "Following" saat sudah follow
 - Data tersimpan di state `isFollowed`
 
 ### 3. Search Feature
@@ -366,9 +386,11 @@ const handleLike = (id) => {
 
 ---
 
-## 📊 Context API Structure
+## Context API Structure
 
 **UserContext.jsx** menyediakan global state:
+<details>
+<summary>Klik di sini untuk melihat Kode</summary>
 
 ```jsx
 <UserContext.Provider value={{
@@ -385,86 +407,13 @@ const handleLike = (id) => {
     {children}
 </UserContext.Provider>
 ```
+</details>
 
 **Component yang menggunakan Context:**
 - Menu.jsx - Mengakses `activePage`, `setActivePage`
 - MainPage.jsx - Mengakses `posts`, `activePage`
 - Search.jsx - Mengakses `posts`, `searchQuery`, `setSearchQuery`
 - Content.jsx - Mengakses `handleLike`, `handleFollow`
-
----
-
-## 🚀 Cara Menjalankan Aplikasi
-
-### 1. Install Dependencies
-```bash
-npm install
-```
-
-### 2. Jalankan Development Server
-```bash
-npm run dev
-```
-
-Aplikasi akan berjalan di `http://localhost:5173/` (atau port lain jika 5173 sudah terpakai)
-
-### 3. Build untuk Production
-```bash
-npm run build
-```
-
-### 4. Preview Production Build
-```bash
-npm run preview
-```
-
----
-
-## 📝 Checklist Persyaratan Tugas
-
-### ✅ Instalasi React Berhasil (10 poin)
-- [x] Project bisa dijalankan dengan `npm run dev`
-- [x] Menggunakan Vite sebagai build tool
-- [x] React dan dependencies terinstall
-
-### ✅ Fetch API Berhasil (20 poin)
-- [x] Data user tampil dari JSONPlaceholder API
-- [x] Menggunakan `useEffect` untuk fetch
-- [x] Data dimapping ke posts dengan username dan email API
-- [x] Error handling untuk fetch error
-
-### ✅ Pemecahan Component (20 poin)
-- [x] Terpisah menjadi 8+ components
-- [x] Navbar.jsx - Header dengan user info
-- [x] Menu.jsx - Sidebar navigasi
-- [x] MainPage.jsx - Main container
-- [x] Content.jsx - Post card
-- [x] Search.jsx - Search page
-- [x] Login.jsx - Login form
-- [x] Signup.jsx - Signup form
-- [x] Footer.jsx - Footer
-
-### ✅ Penggunaan React Hook (20 poin)
-- [x] **useState** - State management di UserContext dan components
-- [x] **useEffect** - Fetch API data, check localStorage
-- [x] **useContext** - Global state di semua components
-- [x] **useRef** - Bisa ditambahkan untuk input references
-
-### ✅ Interaktivitas Website (20 poin)
-- [x] Like button - Toggle like status
-- [x] Follow button - Toggle follow status
-- [x] Search input - Filter posts by username
-- [x] Menu navigation - Switch between pages
-- [x] Login/Logout - User authentication
-- [x] Real-time updates - State changes reflect immediately
-
-### ✅ Dokumentasi Project (10 poin)
-- [x] README.md lengkap dengan penjelasan
-- [x] Penjelasan fetch API dan implementasinya
-- [x] Penjelasan semua components dan fungsinya
-- [x] Implementasi React Hooks dengan contoh kode
-- [x] Potongan kode program sebagai bukti
-- [x] Dokumentasi singkat, rapi, dan mudah dipahami
 
 ---
 
