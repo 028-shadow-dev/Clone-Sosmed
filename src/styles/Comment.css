@@ -44,6 +44,7 @@
 .comment-input:focus {
   border-color: #a8a8a8;
   background-color: #ffffff;
+  color: black;
 }
 
 /* Tombol Kirim */

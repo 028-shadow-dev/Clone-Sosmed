@@ -31,10 +31,6 @@
 
 /* Badge jumlah teman */
 .friend-count-badge {
-    position: absolute;
-    right: 2rem;
-    top: 55%;
-    transform: translateY(-50%);
     background-color: #507cf3;
     color: white;
     padding: 6px 14px;

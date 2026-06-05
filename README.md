@@ -1,14 +1,6 @@
 # Antagram - Aplikasi Social Media Sederhana
 
 **Tugas Akhir Semester Kelas 11 RPL - SMK Letris Indonesia 2**
-**Program Studi: Rekayasa Perangkat Lunak dan Gim**
-**Semester: Ganjil Tahun Akademik 2025/2026**
-
----
-
-## Deskripsi Aplikasi
-
-Antagram adalah aplikasi web social media sederhana yang dibangun menggunakan **React JS**. Aplikasi ini menampilkan feed dari berbagai user, memungkinkan pengguna untuk like, follow, dan mencari user lain.
 
 ---
 
